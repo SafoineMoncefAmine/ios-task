@@ -29,24 +29,27 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="283"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nUM-Wt-gd4">
-                                            <rect key="frame" x="8" y="8" width="399" height="307"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nUM-Wt-gd4">
+                                            <rect key="frame" x="0.0" y="0.0" width="399" height="307"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3t-mf-lUQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="267"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h3t-mf-lUQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="h3t-mf-lUQ" secondAttribute="height" multiplier="4:3" id="uZq-MR-w6v"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sh7-tg-PAp">
-                                                    <rect key="frame" x="0.0" y="267" width="359" height="32.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sh7-tg-PAp">
+                                                    <rect key="frame" x="0.0" y="281.5" width="375" height="1.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiC-pw-PH8" customClass="LabelWithPadding" customModule="CampaignBrowser" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiC-pw-PH8" customClass="LabelWithPadding" customModule="CampaignBrowser" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1.5"/>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKV-MD-vzF" customClass="LabelWithPadding" customModule="CampaignBrowser" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="20.5" width="359" height="12"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKV-MD-vzF" customClass="LabelWithPadding" customModule="CampaignBrowser" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="1.5" width="375" height="0.0"/>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="8"/>
                                                             <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="12"/>
@@ -59,6 +62,12 @@
                                         </stackView>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="nUM-Wt-gd4" firstAttribute="leading" secondItem="Kec-Ca-5D8" secondAttribute="leading" id="Lva-IY-ahr"/>
+                                    <constraint firstItem="nUM-Wt-gd4" firstAttribute="top" secondItem="Kec-Ca-5D8" secondAttribute="top" id="OIh-CF-fuA"/>
+                                    <constraint firstAttribute="trailing" secondItem="nUM-Wt-gd4" secondAttribute="trailing" id="PeY-K3-0qy"/>
+                                    <constraint firstAttribute="bottom" secondItem="nUM-Wt-gd4" secondAttribute="bottom" id="Pz9-XQ-TYy"/>
+                                </constraints>
                                 <size key="customSize" width="375" height="283"/>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="iKV-MD-vzF" id="Zvs-Xr-6X8"/>
