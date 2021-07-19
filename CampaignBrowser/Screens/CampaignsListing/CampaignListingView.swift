@@ -10,7 +10,7 @@ class CampaignListingView: UICollectionView {
     /**
      A strong reference to the view's data source. Needed because the view's dataSource property from UIKit is weak.
      */
-    @IBOutlet var strongDataSource: UICollectionViewDataSource!
+    @IBOutlet private var strongDataSource: UICollectionViewDataSource!
 
     /**
      Displays the given campaign list.
@@ -39,6 +39,22 @@ class CampaignListingView: UICollectionView {
 
         /** The cell which is used to display a campaign. */
         case campaignCell
+    }
+    
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
+        useAutomaticResizing()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        useAutomaticResizing()
+    }
+    
+    private func useAutomaticResizing() {
+        if let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout {
+           flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
     }
 }
 
@@ -78,12 +94,6 @@ class ListingDataSource: NSObject, UICollectionViewDataSource, UICollectionViewD
         }
         return cell
     }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 450)
-    }
-
 }
 
 
